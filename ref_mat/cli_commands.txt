@@ -1,0 +1,3 @@
+npm run dev
+documentation build src/** -f html -o docs -w
+documentation readme src/** --section=Documentation

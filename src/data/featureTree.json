@@ -1,0 +1,536 @@
+{
+  "resources": [
+    {
+      "name": "catnip",
+      "isUnlocked": true,
+      "passive": [["catnip", "(0.125 * game.r.get('field').qty)*(1 + 0.03 * game.r.get('aqueduct').qty)"]],
+      "active": [["catnip","1"]],
+      "min": "0",
+      "max": "5000"
+    },
+    {
+      "name": "wood",
+      "isUnlocked": true,
+      "active": [["wood","1"],["catnip","-50"]],
+      "min": "0",
+      "max": "300"
+    },
+    {
+      "name": "minerals",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "250"
+    },
+    {
+      "name": "coal",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "60"
+    },
+    {
+      "name": "iron",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "50"
+    },
+    {
+      "name": "titanium",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "2"
+    },
+    {
+      "name": "gold",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "10"
+    },
+    {
+      "name": "catpower",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "name": "science",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "250"
+    },
+    {
+      "name": "culture",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "name": "faith",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "kittens",
+      "isUnlocked": false,
+      "min": "0",
+      "max": "0"
+    },
+    {
+      "name": "beam",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "scaffold",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "ship",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "slab",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "plate",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "steel",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "gear",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "parchment",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "manuscript",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "compendium",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "blueprint",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "fur",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "ivory",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "spice",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "unicorn",
+      "isUnlocked": false,
+      "min": "0"
+    },
+    {
+      "name": "field",
+      "isUnlocked": false,
+      "active": [["field", "1"], ["catnip", "-10 * Math.pow(_rself_.costRatio, _rself_.qty)"]],
+      "costRatio": "1.12",
+      "isProducer": true
+    },
+    {
+      "name": "pasture",
+      "isUnlocked": false,
+      "active": [
+        ["pasture", "1"],
+        ["catnip", "-100 * (Math.pow(_rself_.costRatio, _rself_.qty))"],
+        ["wood", "-10 * (Math.pow(_rself_.costRatio, _rself_.qty))"]
+      ],
+      "requirement": [["animal_husbandry","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "aqueduct",
+      "isUnlocked": false,
+      "active": [["aqueduct", "1"], ["minerals", "-75 * Math.pow(_rself_.costRatio, _rself_.qty)"]],
+      "requirement": [["engineering","1"]],
+      "costRatio": "1.12",
+      "isProducer": true
+    },
+    {
+      "name": "hut",
+      "isUnlocked": false,
+      "active": [["hut", "1"], ["wood", "-5 * Math.pow(_rself_.costRatio, _rself_.qty)"]],
+      "costRatio": "2.5",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "house",
+      "isUnlocked": false,
+      "active": [
+        ["house", "1"],
+        ["wood", "-200 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["minerals", "-250 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["construction","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "library",
+      "isUnlocked": false,
+      "active": [["library", "1"], ["wood", "-25 * Math.pow(_rself_.costRatio, _rself_.qty)"]],
+      "requirement": [["animal_husbandry","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "academy",
+      "isUnlocked": false,
+      "active": [
+        ["academy", "1"],
+        ["wood", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["minerals", "-70 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["science", "-100 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["mathematics","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "observatory",
+      "isUnlocked": false,
+      "active": [
+        ["observatory", "1"],
+        ["scaffold", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["slab", "-35 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["iron", "-750 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["science", "-1000 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["astronomy","1"]],
+      "costRatio": "1.10",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "barn",
+      "isUnlocked": false,
+      "active": [
+        ["barn", "1"],
+        ["wood", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["agriculture","1"]],
+      "costRatio": "1.75",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "warehouse",
+      "isUnlocked": false,
+      "active": [
+        ["warehouse", "1"],
+        ["beam", "-1.5 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["slab", "-2 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["construction","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "harbour",
+      "isUnlocked": false,
+      "active": [
+        ["harbour", "1"],
+        ["scaffold", "-5 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["slab", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["plate", "-75 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["navigation","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "mine",
+      "isUnlocked": false,
+      "active": [
+        ["mine", "1"],
+        ["wood", "-100 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["mining","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "quarry",
+      "isUnlocked": false,
+      "passive": [["coal", "0.015 * _rself_.qty"]],
+      "active": [
+        ["quarry", "1"],
+        ["scaffold", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["steel", "-125 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["slab", "-1000 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["geology","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "lumber_mill",
+      "isUnlocked": false,
+      "active": [
+        ["lumber_mill", "1"],
+        ["wood", "-100 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["iron", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["minerals", "-250 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["construction","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "steamworks",
+      "isUnlocked": false,
+      "active": [
+        ["steamworks", "1"],
+        ["steel", "-65 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["gear", "-20 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["blueprint", "-1 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["machinery","1"]],
+      "costRatio": "1.25",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "smelter",
+      "isUnlocked": false,
+      "passive": [
+        ["iron", "0.02 * _rself_.qty"],
+        ["wood", "0.05 * _rself_.qty"],
+        ["minerals", "0.1 * _rself_.qty"]
+        ],
+      "active": [
+        ["smelter", "1"],
+        ["minerals", "-200 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["metal_working","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "amphitheatre",
+      "isUnlocked": false,
+      "passive": [["culture", "0.005 * _rself_.qty"]],
+      "active": [
+        ["amphitheatre", "1"],
+        ["wood", "-200 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["minerals", "-1200 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["parchment", "-3 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["writing","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "chapel",
+      "isUnlocked": false,
+      "passive": [
+        ["culture", "0.05 * _rself_.qty"],
+        ["faith", "0.005 * _rself_.qty"]
+      ],
+      "active": [
+        ["chapel", "1"],
+        ["minerals", "-2000 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["culture", "-250 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["parchment", "-250 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["acoustics","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "temple",
+      "isUnlocked": false,
+      "passive": [["culture", "0.1 * _rself_.qty"]],
+      "active": [
+        ["temple", "1"],
+        ["slab", "-25 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["plate", "-15 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["gold", "-50 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["manuscript", "-10 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["philosophy","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "workshop",
+      "isUnlocked": false,
+      "active": [
+        ["workshop", "1"],
+        ["wood", "-100 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["minerals", "-400 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["mining","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "tradepost",
+      "isUnlocked": false,
+      "active": [
+        ["tradepost", "1"],
+        ["wood", "-500 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["minerals", "-200 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["gold", "-10 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["currency","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "mint",
+      "isUnlocked": false,
+      "passive": [
+        ["fur", "0.0000875 * _rself_.qty * game.r.get('catpower').max.n"],
+        ["ivory", "0.0000210 * _rself_.qty * game.r.get('catpower').max.n"],
+        ["catpower", "0.75 * _rself_.qty"],
+        ["gold", "-0.005 * _rself_.qty"]
+      ],
+      "active": [
+        ["mint", "1"],
+        ["minerals", "-5000 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["plate", "-200 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["gold", "-500 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["architecture","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "unicorn_pasture",
+      "isUnlocked": false,
+      "passive": [["unicorn", "0.001 * _rself_.qty"]],
+      "active": [
+        ["unicorn_pasture", "1"],
+        ["unicorn", "-2 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["animal_husbandry","1"]],
+      "costRatio": "1.75",
+      "isProducer": true,
+      "incomplete": true
+    },
+    {
+      "name": "template",
+      "isUnlocked": false,
+      "passive": [["catnip", "0.125 * _rself_.qty"]],
+      "active": [
+        ["template", "1"],
+        ["catnip", "-10 * Math.pow(_rself_.costRatio, _rself_.qty)"],
+        ["catnip", "-10 * Math.pow(_rself_.costRatio, _rself_.qty)"]
+      ],
+      "requirement": [["animal_husbandry","1"]],
+      "costRatio": "1.15",
+      "isProducer": true,
+      "incomplete": true
+    },
+
+
+
+
+
+    {
+      "name": "farmer",
+      "isUnlocked": false
+    }
+  ],
+  "upgrades": [
+    {
+      "name": "farming",
+      "isUnlocked": true,
+      "type": "once",
+      "active": [["catnip", "-50"]],
+      "action": "game.f.get('research').unlock(); game.r.get('farmer').unlock();"
+    }
+  ],
+  "features": [
+    {
+      "name": "common",
+      "isUnlocked": true,
+      "activeName": "Get",
+      "resources": ["catnip", "wood", "minerals", "coal", "iron",
+                    "titanium", "gold", "catpower", "science",
+                    "culture", "faith", "kittens", "fur",
+                    "ivory", "spice", "unicorn"]
+    },
+    {
+      "name": "crafted",
+      "isUnlocked": true,
+      "activeName": "Craft",
+      "resources": ["beam", "scaffold", "ship", "slab", "plate",
+                    "steel", "gear", "parchment", "manuscript",
+                    "compendium", "blueprint"]
+    },
+    {
+      "name": "structure",
+      "isUnlocked": true,
+      "activeName": "Build",
+      "resources": ["field", "pasture", "aqueduct", "hut", "house",
+                    "library", "academy", "observatory", "barn",
+                    "warehouse", "harbour", "mine", "quarry",
+                    "lumber_mill", "steamworks", "smelter",
+                    "amphitheatre", "chapel", "temple", "workshop",
+                    "tradepost", "mint", "unicorn_pasture"]
+    },
+    {
+      "name": "research",
+      "isUnlocked": false,
+      "activeName": "Research",
+      "resources": ["farmer"]
+    }
+  ],
+  "triggers": [
+    {
+      "name": "onFirstCatnip3",
+      "type": "once",
+      "condition": "game.r.get('catnip').qty > 3",
+      "action": "console.log('did trigger!')"
+    }
+  ]
+}
